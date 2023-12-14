@@ -1,0 +1,54 @@
+/* body{
+    justify-content: center;
+    align-content: center;
+} */
+
+/* HEADER */
+
+header {
+  background-color: rgb(57, 57, 70);
+}
+
+#encabezado {
+  color: rgb(17, 14, 14);
+  justify-content: center;
+  text-align: center;
+}
+
+/* FORMULARIO */
+
+#formulario {
+  background-color: rgb(117, 119, 117);
+}
+
+#agregar {
+  background-color: rgb(92, 92, 243);
+  border-radius: 25px;
+  height: 30px;
+  width: auto;
+}
+
+/* TABLA */
+
+#tabla {
+  width: 100%;
+  height: auto;
+  background-color: rgb(71, 69, 69);
+}
+
+#vaciar {
+  /* background-color: rgb(92, 92, 243);
+    border-radius: 25px;
+    height: 60px;
+    width: 100px;
+    text-align: center; */
+  
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  border-radius: 10%;
+  width: fit-content;
+  border: none;
+  background-color: rgb(92, 92, 243);
+  color: #dfdbf0;
+}

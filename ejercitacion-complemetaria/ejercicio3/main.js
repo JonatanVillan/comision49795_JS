@@ -1,39 +1,53 @@
-//CREAR CARNET DE CONDUCION CON DATOS DE LA PERSONA.
+alert("Bienvenido a tu lisyta de contactos!\n ¿Que deseas hacer?");
 
+const lista_de_contactos = [];
 
+while(true){
+    const comando = prompt(
+      `Ingrese la accion a realizar:\n "agregar"\n "eliminar"\n "buscar"\n "salir"\n`
+    );
 
-/* let dni = "36935560";
-let nombre_conductor = "jonatan villan";
-let pais = "argentina"
-let direccion = "mendoza 2543 6a";
-let fecha_nacimiento = "28/02/1992";
-let sexo = "M";
-let edad ="31";
-let altura = "1.75m";
-let peso = "68kg";
-let color_de_ojos = "marrones";
-const codigo = "555465ajd";
+    switch (comando) {
+        case "agregar" :
+            const nombre =prompt("Ingrese el nombre del nuevo contacto:");
+            const telefono = +prompt("Ingrese el numero de telefono del nuevo contacto:");
 
-let carnet = `codigo ${codigo}\n nombre ${nombre_conductor}\n pais${pais}\n direccion ${direccion}\n fecha de nacimiento${fecha_nacimiento}`;
- console.log(carnet);
-*/
+            lista_de_contactos.push({nombre, telefono});
+            alert(`${nombre} ah sido agregado con exito!`);
+            break;
+        
+        case "eliminar":
+            const eliminar_contacto = prompt("Ingrese el nombre del contacto a aliminar:");
+            const eliminar = lista_de_contactos.findIndex(
+                (contacto) => contacto.nombre === eliminar_contacto
+            );
+            if (eliminar_contacto !== -1){
+                lista_de_contactos.splice(eliminar);
+                alert("¡Contacto eliminado!");
+            } else{
+                alert("El contacto seleccionado no existe.\n Intente nuevamente.");
+            };
+            break;
 
-//OBEJTOS LITERALES
-const un_objeto = {
-    edad : `31`,
-    sexo : `m`,
-    nombre : `jonatan`,
-    apellido : `villan`
-}
+        case "buscar":
+            const buscar_nombre = prompt ("Ingrese el nombre del contacto que desea ver:");
+            const contacto_encontrado = lista_de_contactos.find(
+                (contacto) => contacto.nombre === buscar_nombre
+                );
+            if (contacto_encontrado) {
+                alert(`contacto encontrado:
+                ${contacto_encontrado.nombre} : ${contacto_encontrado.telefono}`);
+            } else{
+                alert("¡Error!\n Intenta nuevamente");
+            };
+            break;
+        
+        case "salir" :
+            alert("Cerrando agenda de contactos");
+            Process.exit(0);
+            break;
 
-/* console.log(un_objeto);
-
-un_objeto.dni = `36935560`;
-
-console.log(un_objeto);
-
-un_objeto.sexo = `masculino`;
-
-console.log(un_objeto); */
-
-//LLAMANDO A LOS OBJETOS CON [];
+        default :
+        alert("Comando incorrecto, intente nuevamente.")
+    }
+};

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./estilos.css" rel="stylesheet">
+    <title>lista de super</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1 id="encabezado">
+                tu lista de compras
+            </h1>
+    </header> 
+
+        <div id="contenedor">
+            
+                <form id="formulario">
+                <label>
+                    Elija un producto
+                </label>
+                <select>
+                    <option>
+                        agregar a la lista
+                    </option> 
+                </select>
+                <br>
+                <button id="agregar">
+                    Agregar
+                </button>
+                </form>
+            
+            
+                <table id="tabla">
+                    <thead>
+                    <tr id="titulos">
+                        <th>item</th>
+                        <th>producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio Unidad</th>
+                        <th> Precio Total</th>
+                    </tr>
+                    </thead>
+                    <tbody id="items">
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th id="total"></th>
+                        </tr>
+                    </tfoot>
+                </table>
+           
+
+            <div id="divvaciar">
+                <button id="vaciar">
+                    <h4>
+                        vaciar lista
+                    </h4>
+                </button>
+            </div>
+        </div>
+</body>
+</html>
